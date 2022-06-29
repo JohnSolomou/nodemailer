@@ -1,0 +1,27 @@
+Email Sending Apprentice 1
+A developer who can implement systems that send emails
+
+Master the following skills:
+Describe the systems that are involved in sending emails
+  First, you use a mail user agent, or MUA to read and send email from your device (such as gmail, or the mail app on Apple devices). These programs are only active when you're using them.
+
+  Generally, they communicate with a mail transfer agent, or MTA (also known as a mail server, MX host, and mail exchanger), which serves to receive and store your emails.
+
+  Emails are stored remotely until you open your MUA in order to check your email. Emails are delivered by mail delivery agents (MDA), which are generally packaged with the MTA.
+
+  Mail used to be sent to a mail server using SMTP, or Simple Mail Transfer Protocol. SMTP is a communication protocol for email.
+
+  Mail would then be downloaded from the server using Post Office Protocol (POP3) POP3 is an application-layer protocol which provides access via an internet protocol (IP) network for a user application to contact a mailbox on a mail server. It can connect, retrieve messages, store them on the client's computer, and delete or retain them on the server.
+
+  Now, IMAP, Internet Message Access Protocol, has mostly replaced POP3. IMAP can allow multiple clients to manage the same mailbox (so you can read your email from your desktop, laptop, and phone, etc. and all of your messages will be there, organized in the same way).
+
+  SPF (Sender Policy Framework)security for mail
+    SPF allows the owner of a domain (like google.com) to set a TXT record in its DNS that states which servers are allowed to send mail from that domain
+
+  DKIM (DomainKeys Identified Mail)
+    DKIM is similar to SPF. It uses TXT records in the sending domain's DNS as well, and it provides some authentication of the message itself. It attempts to provide verification that messages weren't altered in transit.
+  DMARC (Domain-Based Message Authentication, Reporting, and Conformance)
+    DMARC is essentially instructions for mail servers on how to handle SPF and DKIM records. It doesn't perform any tests of its own, but it tells mail servers how to handle the checks which SPF and DKIM perform.
+Write code that sends email using an SMTP server(see portfolio website)
+Write code that sends email using gmail (see index.js)
+Write code that sends email using a mail service (SaaS)(see portfolio website)
